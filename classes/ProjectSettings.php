@@ -39,7 +39,7 @@ class WS_PSettings {
 
     /**
      * Get field value by name
-     * @param str $name
+     * @param string $name
      * @param mixed $default any value if empty field
      * @return type
      */
