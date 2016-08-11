@@ -6,12 +6,14 @@ $moduleName = "ws.projectsettings";
 define("ADMIN_MODULE_NAME", $moduleName);
 define("ADMIN_MODULE_ICON", "");
 
-$pathLang = BX_ROOT.'/modules/'.$moduleName.'/lang/js_'.LANGUAGE_ID;
+$pathLang = BX_ROOT.'/modules/'.$moduleName.'/js'; //for bitrix 16.0 or higher
+$pathAdditionalLang = BX_ROOT.'/modules/'.$moduleName.'/lang/'.LANGUAGE_ID.'/js'; //for bitrix < 16.0
 $pathModuleJsFolder = '/bitrix/js/'.$moduleName.'/';
 foreach (array(
     'ws_progectssettings_main' => array(
         'js' => $pathModuleJsFolder.'main.js',
         'lang' => $pathLang.'.php',
+        'lang_additional' => $pathAdditionalLang.'.php',
         'skip_core' => true,
     ),
     'ws_progectssettings_fields' => array(
